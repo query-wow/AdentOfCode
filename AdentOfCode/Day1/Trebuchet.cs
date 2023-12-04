@@ -6,7 +6,7 @@
         {
             public static async Task PrintResultAsync()
             {
-                Console.WriteLine(Solver(await File.ReadAllLinesAsync(@"Day1\input.txt")));
+                Console.WriteLine("{0} solution is {1}", nameof(Part1), Solver(await File.ReadAllLinesAsync(@"Day1\input.txt")));
             }
 
             public static int Solver(IEnumerable<string> lines)
@@ -46,6 +46,10 @@
                     _numberMap.Add(i.ToString(), i);
             }
 
+            public static async Task PrintResultAsync()
+            {
+                Console.WriteLine("{0} solution is {1}", nameof(Part2), Solver(await File.ReadAllLinesAsync(@"Day1\input.txt")));
+            }
 
             public static int Solver(IEnumerable<string> lines)
             {
